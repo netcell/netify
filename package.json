@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "node-notifier": "^4.3.1",
+    "yargs": "^3.30.0"
+  },
+  "name": "netify",
+  "version": "1.0.0",
+  "description": "Watch over for internet connection and notify you of its status.",
+  "preferGlobal": true,
+  "bin": {
+    "netify": "app.js"
+  },
+  "repository" : {
+  	"type" : "git",
+  	"url" : "https://github.com/netcell/netify.git"
+  },
+  homepage : "netcell.github.io/netify",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ping",
+    "network",
+    "internet",
+    "connection",
+    "status"
+  ],
+  "author": "Nguyen Tuan Anh, Pham Trung Thanh",
+  "license": "MIT"
+}
