@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Netify by netcell</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Netify</h1>
+        <p>Watch over for internet connection and notify you of its status.</p>
+
+        <p class="view"><a href="https://github.com/netcell/netify">View the Project on GitHub <small>netcell/netify</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/netcell/netify/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/netcell/netify/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/netcell/netify">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>This tool is create by <a href="https://github.com/netcell">netcell</a> and <a href="https://github.com/thanhdeptrai">thanhdeptrai</a>.</p>
+
+<p><img src="http://i.imgur.com/AdhmcL7.jpg" alt="Netify, keep it alive"></p>
+
+<p>This simple tool is written using <a href="https://nodejs.org">Node.js</a>, tested on Windows 10 and Mac OSX El Capitan, but should works with most versions of Windows and Mac OSX that support notification.</p>
+
+<p>The tool checks with <code>ping</code> command of the system and notifies when you lose internet connection, when you get it back and when the connection quality is low.</p>
+
+<p><strong>Support translation:</strong> English and Vietnamese. Translations are welcome. Please look into <code>language.js</code> file for more information and create a PR if you want to contribute a translation.</p>
+
+<p>Feel free to follow me on twitter <a href="https://twitter.com/netcell">@netcell</a> and check out <a href="http://anhnt.ninja">my blog</a>!</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre><code>npm install -g netify
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>netify
+</code></pre>
+
+<p><strong>Available options:</strong></p>
+
+<ul>
+<li>
+<code>--host|-h</code>: by default <code>netify</code> pings <code>goole.com</code>, you can change the destination host using this option, eg. </li>
+</ul>
+
+<pre><code>netify -h=github.com
+</code></pre>
+
+<ul>
+<li>
+<code>--threshold|-t</code>: by default when <code>ttl</code> is over <code>1000</code>, <code>netify</code> will notify you that the connection is weak, you can change the threshold using this option, the value is in <code>ms</code>, eg. </li>
+</ul>
+
+<pre><code>netify -t=300
+</code></pre>
+
+<ul>
+<li>
+<code>--silent|-s</code>: disable notification, not really useful but <a href="https://github.com/thanhdeptrai">thanhdeptrai</a> insisted.</li>
+<li>
+<code>--lang</code>: by default <code>netify</code> use English translation, you can change it using this option, eg. </li>
+</ul>
+
+<pre><code>netify --lang=vi
+</code></pre>
+
+<ul>
+<li>You also can use the language code directly, eg. </li>
+</ul>
+
+<pre><code>netify --vi
+</code></pre>
+
+<p><strong>Supported languages and codes</strong></p>
+
+<ul>
+<li>
+<code>en</code> : English </li>
+<li>
+<code>vi</code> : Vietnamese</li>
+</ul>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p>This content is released under the (<a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) MIT License.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/netcell">netcell</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-62565835-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
