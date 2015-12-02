@@ -28,7 +28,12 @@ notification && console.log(translation.MANUAL);
 var ls;
 
 var platform = os.platform();
-if (platform.match(/^win/)) {
+
+if (platform === 'linux') {
+	var args = [host];
+	ls = cp.spawn('/bin/ping', args);
+}
+else if (platform.match(/^win/)) {
 	var args = [host, '-t'];
     ls = cp.spawn('C:/windows/system32/ping.exe', args);
 } else if (platform === 'darwin') {
@@ -43,22 +48,26 @@ var PING_STATE_WEAK_SIGNAL = 1;
 var PING_STATE_SUCCESS     = 2;
 var currentPingState       = PING_STATE_ERROR;
 
-ls.stdout.on('data', function (data) {
-	var string = String(data);
-	process.stdout.write(string);
+if(!ls){
+	console.log('This app does not support your system!!');
+}
+else{
+	ls.stdout.on('data', function (data) {
+		var string = String(data);
+		process.stdout.write(string);
 
-	switch (currentPingState) {
-		case PING_STATE_ERROR:
-			checkPingSuccess(string);
-			break;
-		case PING_STATE_WEAK_SIGNAL:
-		case PING_STATE_SUCCESS:
-			var checkError = checkPingError(string);
-			if (!checkError) checkPingSuccess(string);
-			break;
-	}
-});
-
+		switch (currentPingState) {
+			case PING_STATE_ERROR:
+				checkPingSuccess(string);
+				break;
+			case PING_STATE_WEAK_SIGNAL:
+			case PING_STATE_SUCCESS:
+				var checkError = checkPingError(string);
+				if (!checkError) checkPingSuccess(string);
+				break;
+		}
+	});
+}
 function checkPingSuccess(string) {
 	var pingSuccess = true;
 	var stringLower = string.toLowerCase();
