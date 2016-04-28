@@ -11,7 +11,7 @@ The tool checks with `ping` command of the system and notifies when you lose int
 
 **Support translation:** English and Vietnamese. Translations are welcome. Please look into `language.js` file for more information and create a PR if you want to contribute a translation.
 
-Feel free to follow me on twitter [@netcell](https://twitter.com/netcell) and check out [my blog](http://anhnt.ninja)!
+Feel free to follow me on twitter [@netcell](https://twitter.com/netcell) and check out [my blog](http://netcell.github.io)!
 
 ## Installation
 
